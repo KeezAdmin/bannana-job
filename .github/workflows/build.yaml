@@ -18,7 +18,7 @@ jobs:
   notify:
     needs: build
     if: always()
-    uses: KeezAdmin/infra-reusable-ops/.github/workflow/failure-notif.yaml@main
+    uses: KeezAdmin/infra-reusable-ops/.github/workflows/failure-notif.yaml@main
     secrets: inherit
     with:
       channel-id: 'general'
