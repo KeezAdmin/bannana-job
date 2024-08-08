@@ -14,14 +14,14 @@ jobs:
       - name: Run Build
         run: |
           echo "Building the project..."
-          exit 1
+          
   notify:
     needs: build
     if: always()
     uses: KeezAdmin/infra-reusable-ops/.github/workflows/failure-notif.yaml@main
     secrets: inherit
     with:
-      channel-id: 'general'
+      channel-id: 'portal-setup'
       job-status: ${{ needs.build.result }}
       message: "The build completed with status `${{ needs.build.result }}` in `2kg-coretech/bannana-job` on branch `${{ github.ref_name }}`."
         
