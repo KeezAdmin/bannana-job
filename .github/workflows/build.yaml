@@ -1,4 +1,5 @@
 name: CI Build and Notify
+
 on:
   push:
     branches:
