@@ -19,7 +19,6 @@ jobs:
     needs: build
     if: always()
     uses: KeezAdmin/infra-reusable-ops/.github/workflows/failure-notif.yaml@main
-    secrets: inherit
     with:
       channel-id: 'portal-setup'
       job-status: ${{ needs.build.result }}
