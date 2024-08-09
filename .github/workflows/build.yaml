@@ -19,8 +19,6 @@ jobs:
     needs: build
     if: always()
     uses: KeezAdmin/infra-reusable-ops/.github/workflows/failure-notif.yaml@main
-    secrets: 
-      SLACK_BOT_TOKEN: "${{ secrets.SLACK_BOT_TOKEN }}"
     with:
       channel-id: 'portal-setup'
       job-status: ${{ needs.build.result }}
